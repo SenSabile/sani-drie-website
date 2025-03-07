@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sani Drie Bouwmaterialen - Innovatie in Bouw</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: #FFFFFF;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header {
+            background: #005b96; /* Elon-inspired deep blue */
+            color: #FFFFFF;
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #CC0000; /* Tesla red accent */
+        }
+        .cta {
+            background: #CC0000;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        section {
+            padding: 6rem 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero {
+            background: url('https://lh5.googleusercontent.com/p/AF1QipPNcV2csxbursJkIyFu1ffL6m4iqErkrStJABVA=w1200-h400-k-no') no-repeat center/cover;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10rem 2rem 4rem;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 91, 150, 0.5); /* Overlay with #005b96 */
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            position: relative;
+            z-index: 1;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .card {
+            background: #E0E0E0; /* Light grey */
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        .card h3 {
+            color: #005b96;
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            background: #005b96;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        input, textarea, button {
+            padding: 0.8rem;
+            border: 1px solid #005b96;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            background: #CC0000;
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #A30000;
+        }
+        .section-img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background: #005b96;
+                width: 100%;
+                padding: 1rem 0;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links a {
+                margin: 1rem 0;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Sani Drie</div>
+            <div class="hamburger">☰</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#over-ons">Over Ons</a>
+                <a href="#producten">Producten</a>
+                <a href="#diensten">Diensten</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact" class="cta">Offerte Aanvragen</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+        <h1>Bouw de Toekomst met Sani Drie</h1>
+        <p>Innovatieve bouwmaterialen voor een duurzame wereld</p>
+    </section>
+
+    <!-- Over Ons -->
+    <section id="over-ons">
+        <h2>Over Ons</h2>
+        <p>Sani Drie Bouwmaterialen, gevestigd in Zwijndrecht nabij Antwerpen, combineert traditionele expertise met vooruitstrevende technologie om de bouwsector te revolutioneren. Wij zijn uw partner voor hoogwaardige materialen en ongeëvenaarde service.</p>
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Magazijn" class="section-img">
+    </section>
+
+    <!-- Producten -->
+    <section id="producten">
+        <h2>Producten</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1581578735769-4e025141d9e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Ruwbouw">
+                <h3>Ruwbouw</h3>
+                <p>Betrouwbare stenen, beton en cement voor elk fundament.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Afwerking">
+                <h3>Afwerking</h3>
+                <p>Pleister, tegels en verf van topkwaliteit.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hout">
+                <h3>Hout & Platen</h3>
+                <p>Duurzaam hout, multiplex en MDF.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Isolatie">
+                <h3>Isolatie</h3>
+                <p>Efficiënte glaswol en schuimplaten.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1580983561371-7f4b76720d8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Gereedschap">
+                <h3>Gereedschap</h3>
+                <p>Hand- en elektrisch gereedschap voor precisie.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diensten -->
+    <section id="diensten">
+        <h2>Diensten</h2>
+        <p>Wij bieden meer dan alleen materialen:</p>
+        <div class="cards">
+            <div class="card">
+                <h3>Levering</h3>
+                <p>Snelle en betrouwbare levering aan huis of werf.</p>
+            </div>
+            <div class="card">
+                <h3>Advies</h3>
+                <p>Persoonlijk advies voor uw projecten.</p>
+            </div>
+            <div class="card">
+                <h3>Voorraad</h3>
+                <p>Grote voorraden, direct beschikbaar.</p>
+            </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1586528116311-292c666db91b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Levering" class="section-img">
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Naam" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Telefoon">
+            <textarea placeholder="Bericht" rows="5" required></textarea>
+            <button type="submit">Verzenden</button>
+        </form>
+        <p><strong>Adres:</strong> Verbrandendijk 106, 2070 Zwijndrecht, België</p>
+        <p><strong>Telefoon:</strong> +32 3 123 45 67</p>
+        <p><strong>Email:</strong> info@sanidrie.be</p>
+        <p><strong>Openingstijden:</strong> Ma-Vr: 07:00-17:00, Za: 08:00-12:00, Zo: Gesloten</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.905737672021!2d4.329828315723146!3d51.21943897958947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f535b3141aef%3A0x2d86580bddf9e0ac!2sSani+Drie+bouwmaterialen!5e0!3m2!1sen!2sus!4v1630000000000" width="600" height="450" style="border:0; margin: 2rem auto; display: block;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <footer>
+        <p>© 2025 Sani Drie Bouwmaterialen. Innovatie in Bouw.</p>
+    </footer>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('active'); // Close menu on mobile
+                }
+            });
+        });
+    </script>
+</body>
+</html>
